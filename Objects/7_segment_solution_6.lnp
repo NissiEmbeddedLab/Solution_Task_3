@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\7_segment_solution_6.obj" 
+TO ".\Objects\7_segment_solution_6" 
+PRINT(".\Listings\7_segment_solution_6.m51") RAMSIZE(256) 

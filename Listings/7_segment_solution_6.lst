@@ -1,0 +1,145 @@
+C51 COMPILER V9.60.0.0   7_SEGMENT_SOLUTION_6                                              05/31/2020 21:40:15 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE 7_SEGMENT_SOLUTION_6
+OBJECT MODULE PLACED IN .\Objects\7_segment_solution_6.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 7_segment_solution_6.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT
+                    -(.\Listings\7_segment_solution_6.lst) TABS(2) OBJECT(.\Objects\7_segment_solution_6.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          unsigned char seg[15] = {0x77,0x7c,0x58,0x5e};
+   3          unsigned int i, numbers;
+   4          void main(void)
+   5          {
+   6   1        while(1)
+   7   1        {
+   8   2        for(numbers=0;numbers<15;numbers++)
+   9   2          {
+  10   3        P2 = seg[numbers];
+  11   3        for(i=0;i<40000;i++);
+  12   3        }
+  13   2        }
+  14   1      }
+  15          
+  16          
+  17          /* " ": 0x00,   //0x20 ' '
+  18            "!": 0x86,   //0x21 '!'
+  19            "\"": 0x22,   //0x22 '"'
+  20            "#": 0x7E,   //0x23 '#' ?
+  21            "$": 0x2D,   //0x24 '$' ?
+  22            "%": 0xD2,   //0x25 '%' ?
+  23            "&": 0x7B,   //0x26 '&' ?
+  24            "'": 0x20,   //0x27 '''
+  25            "(": 0x39,   //0x28 '('
+  26            ")": 0x0F,   //0x29 ')'
+  27            "*": 0x63,   //0x2A '*' ?
+  28            "+": 0x00,   //0x2B '+' ?
+  29            ",": 0x10,   //0x2C ','
+  30            "-": 0x40,   //0x2D '-'
+  31            ".": 0x80,   //0x2E '.'
+  32            "/": 0x52,   //0x2F '/' ?
+  33            //30-3F
+  34            "0": 0x3F,   //0x30 '0'
+  35            "1": 0x06,   //0x31 '1'
+  36            "2": 0x5B,   //0x32 '2'
+  37            "3": 0x4F,   //0x33 '3'
+  38            "4": 0x66,   //0x34 '4'
+  39            "5": 0x6D,   //0x35 '5'
+  40            "6": 0x7D,   //0x36 '6'
+  41            "7": 0x07,   //0x37 '7'
+  42            "8": 0x7F,   //0x38 '8'
+  43            "9": 0x6F,   //0x39 '9'
+  44            ":": 0x09,   //0x3A ':' ?
+  45            ";": 0x0D,   //0x3B ';' ?
+  46            "<": 0x58,   //0x3C '<' ?
+  47            "=": 0x48,   //0x3D '='
+  48            ">": 0x4C,   //0x3E '>' ?
+  49            "?": 0xD3,   //0x3F '?' ?
+  50            //40-4F
+  51            "@": 0x5F,   //0x40 '@' ?
+  52            "A": 0x77,   //0x41 'A'
+  53            "B": 0x7C,   //0x42 'B'
+  54            "C": 0x39,   //0x43 'C'
+C51 COMPILER V9.60.0.0   7_SEGMENT_SOLUTION_6                                              05/31/2020 21:40:15 PAGE 2   
+
+  55            "D": 0x5E,   //0x44 'D'
+  56            "E": 0x79,   //0x45 'E'
+  57            "F": 0x71,   //0x46 'F'
+  58            "G": 0x3D,   //0x47 'G'
+  59            "H": 0x76,   //0x48 'H'
+  60            "I": 0x30,   //0x49 'I'
+  61            "J": 0x1E,   //0x4A 'J'
+  62            "K": 0x75,   //0x4B 'K' ?
+  63            "L": 0x38,   //0x4C 'L'
+  64            "M": 0x37,   //0x4D 'M'
+  65            "N": 0x54,   //0x4E 'N'
+  66            "O": 0x3F,   //0x4F 'O'
+  67            //50-5F
+  68            "P": 0x73,   //0x50 'P'
+  69            "Q": 0x67,   //0x51 'Q' ?
+  70            "R": 0x50,   //0x52 'R'
+  71            "S": 0x6D,   //0x53 'S'
+  72            "T": 0x78,   //0x54 'T'
+  73            "U": 0x3E,   //0x55 'U'
+  74            "V": 0x1C,   //0x56 'V' ? (u)
+  75            "W": 0x2A,   //0x57 'W' ?
+  76            "X": 0x76,   //0x58 'X' ? (like H)
+  77            "Y": 0x6E,   //0x59 'Y'
+  78            "Z": 0x5B,   //0x5A 'Z' ?
+  79            "[": 0x39,   //0x5B '['
+  80            "\\": 0x64,   //0x5C '\' ?
+  81            "]": 0x0F,   //0x5D ']'
+  82            "^": 0x23,   //0x5E '^' ?
+  83            "_": 0x08,   //0x5F '_'
+  84            //60-6F
+  85            "`": 0x02,   //0x60 '`' ?
+  86            "a": 0x77,   //0x61 'a'
+  87            "b": 0x7C,   //0x62 'b'
+  88            "c": 0x58,   //0x63 'c'
+  89            "d": 0x5E,   //0x66 'd'
+  90            "e": 0x79,   //0x65 'e'
+  91            "f": 0x71,   //0x66 'f'
+  92            "g": 0x3D,   //0x67 'g'
+  93            "h": 0x74,   //0x68 'h'
+  94            "i": 0x10,   //0x69 'i'
+  95            "j": 0x1E,   //0x6A 'j'
+  96            "k": 0x75,   //0x6B 'k' ?
+  97            "l": 0x38,   //0x6C 'l'
+  98            "m": 0x37,   //0x6D 'm'
+  99            "n": 0x54,   //0x6E 'n'
+ 100            "o": 0x5C,   //0x6F 'o'
+ 101            //70-7F
+ 102            "p": 0x73,   //0x70 'p'
+ 103            "q": 0x67,   //0x71 'q'
+ 104            "r": 0x50,   //0x72 'r'
+ 105            "s": 0x6D,   //0x73 's'
+ 106            "t": 0x78,   //0x74 't'
+ 107            "u": 0x3E,   //0x77 'u' ? (like U)
+ 108            "v": 0x1C,   //0x76 'v' ? (like u)
+ 109            "w": 0x2A,   //0x77 'w' ?
+ 110            "x": 0x76,   //0x78 'x' ? (like H)
+ 111            "y": 0x6E,   //0x79 'y'
+ 112            "z": 0x5B,   //0x7A 'z' ?
+ 113            "{": 0x46,   //0x7B '{' ?
+ 114            "|": 0x30,   //0x7C '|'
+ 115            "}": 0x70,   //0x7D '}' ?
+ 116            "~": 0x01,   //0x7E '~' ?
+C51 COMPILER V9.60.0.0   7_SEGMENT_SOLUTION_6                                              05/31/2020 21:40:15 PAGE 3   
+
+ 117            "DEL": 0x00,   //0x7F 'DEL' */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     63    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
